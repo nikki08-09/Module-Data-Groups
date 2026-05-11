@@ -19,6 +19,11 @@ const tally = require("./tally.js");
 // Given a function called tally
 // When passed an array of items
 // Then it should return an object containing the count for each unique item
+test("tally counts the frequency of each item in an array", () => {
+  expect(tally(["a"])).toEqual({ a: 1 });
+  expect(tally(["a", "a", "a"])).toEqual({ a: 3 });
+  expect(tally(["a", "a", "b", "c"])).toEqual({ a: 2, b: 1, c: 1 });
+});
 
 // Given an empty array
 // When passed to tally
