@@ -33,3 +33,10 @@ It should return:
    'CA': 'CAD'
  }
 */
+test("returns an empty object if the input is not an array", () => {
+  expect(createLookup("not an array")).toEqual({});
+  expect(createLookup(123)).toEqual({});
+  expect(createLookup({})).toEqual({});
+  expect(createLookup(null)).toEqual({});
+  expect(createLookup(undefined)).toEqual({});
+});
