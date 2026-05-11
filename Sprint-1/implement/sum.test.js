@@ -64,3 +64,10 @@ test("given an array containing non-number values, ignores them and returns the 
 // Given an array with only non-number values
 // When passed to the sum function
 // Then it should return the least surprising value given how it behaves for all other inputs
+test.todo(
+  "given an array with only non-number values, returns the least surprising value given how it behaves for all other inputs"
+);
+const nonNumberArray = ["hey", "hi", "hello"];
+test("given an array with only non-number values, returns the least surprising value given how it behaves for all other inputs", () => {
+  expect(sum(nonNumberArray)).toBe(0);
+});
