@@ -54,3 +54,7 @@ test("contains with non-existent property returns false", () => {
 // Given invalid parameters like an array
 // When passed to contains
 // Then it should return false or throw an error
+test("contains with invalid parameters returns false", () => {
+  const arr = [1, 2, 3];
+  expect(contains(arr, "0")).toBe(false); // Arrays are not considered objects for this function
+});
