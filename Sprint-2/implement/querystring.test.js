@@ -44,3 +44,8 @@ test("decodes complex values", () => {
     message: "Hello World",
   });
 });
+test("decodes Urll encoded keys", () => {
+  expect(parseQueryString("greeting%20message=Hello%20World")).toEqual({
+    "greeting message": "Hello World",
+  });
+});
