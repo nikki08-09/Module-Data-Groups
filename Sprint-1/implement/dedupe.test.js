@@ -32,3 +32,7 @@ test("given an array with no duplicates, it returns a copy of the original array
 // Given an array with strings or numbers
 // When passed to the dedupe function
 // Then it should remove the duplicate values, preserving the first occurence of each element
+const arr2 = ["a", "a", "a", "b", "b", "c"];
+test("given an array with strings or numbers, it removes the duplicate values, preserving the first occurence of each element", () => {
+  expect(dedupe(arr2)).toEqual(["a", "b", "c"]);
+});
