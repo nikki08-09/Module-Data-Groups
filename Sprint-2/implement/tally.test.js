@@ -42,3 +42,6 @@ test("tally counts duplicate items correctly", () => {
 // Given an invalid input like a string
 // When passed to tally
 // Then it should throw an error
+test("tally throws an error for non-array input", () => {
+  expect(() => tally("not an array")).toThrow("Input must be an array");
+});
