@@ -18,3 +18,8 @@ test("invert should handle objects with non-string keys and values", () => {
 test("invert should handle objects with duplicate values", () => {
   expect(invert({ a: 1, b: 1 })).toEqual({ 1: "b" });
 });
+test("invert should handle objects with non-primitive values", () => {
+  expect(invert({ a: { x: 1 }, b: { y: 2 } })).toEqual({
+    "[object Object]": "b",
+  });
+});
