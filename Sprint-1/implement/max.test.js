@@ -25,6 +25,11 @@ test("given an empty array, returns -Infinity", () => {
 // Given an array with one number
 // When passed to the max function
 // Then it should return that number
+test.todo("given an array with one number, returns that number");
+const singleNumberArray = [42];
+test("given an array with one number, returns that number", () => {
+  expect(findMax(singleNumberArray)).toBe(42);
+});
 
 // Given an array with both positive and negative numbers
 // When passed to the max function
