@@ -40,3 +40,21 @@ test("returns an empty object if the input is not an array", () => {
   expect(createLookup(null)).toEqual({});
   expect(createLookup(undefined)).toEqual({});
 });
+
+test("returns an empty object if the input is an empty array", () => {
+  expect(createLookup([])).toEqual({});
+});
+
+test("creates a lookup object for valid input", () => {
+  const input = [
+    ["US", "USD"],
+    ["CA", "CAD"],
+    ["GB", "GBP"],
+  ];
+  const expectedOutput = {
+    US: "USD",
+    CA: "CAD",
+    GB: "GBP",
+  };
+  expect(createLookup(input)).toEqual(expectedOutput);
+});
