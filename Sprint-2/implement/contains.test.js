@@ -38,6 +38,10 @@ test("contains on empty object returns false", () => {
 // Given an object with properties
 // When passed to contains with an existing property name
 // Then it should return true
+test("contains with existing property returns true", () => {
+  const obj = { a: 1, b: 2 };
+  expect(contains(obj, "b")).toBe(true);
+});
 
 // Given an object with properties
 // When passed to contains with a non-existent property name
