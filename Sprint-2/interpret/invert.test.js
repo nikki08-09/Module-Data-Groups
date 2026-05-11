@@ -1,4 +1,4 @@
-const invert = require("./invert");
+const invert = require("./invert.js");
 
 test("invert should swap keys and values in the object", () => {
   expect(invert({ a: 1 })).toEqual({ 1: "a" });
