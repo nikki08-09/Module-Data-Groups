@@ -34,6 +34,13 @@ test("given an array with one number, returns that number", () => {
 // Given an array with both positive and negative numbers
 // When passed to the max function
 // Then it should return the largest number overall
+test.todo(
+  "given an array with both positive and negative numbers, returns the largest number overall"
+);
+const mixedNumbersArray = [-10, 20, -5, 30, 0];
+test("given an array with both positive and negative numbers, returns the largest number overall", () => {
+  expect(findMax(mixedNumbersArray)).toBe(30);
+});
 
 // Given an array with just negative numbers
 // When passed to the max function
