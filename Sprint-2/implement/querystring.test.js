@@ -26,3 +26,8 @@ test("parses querystring values containing empty key", () => {
     "": "x",
   });
 });
+test("parses querystring values containing empty key and value", () => {
+  expect(parseQueryString("=")).toEqual({
+    "": "",
+  });
+});
