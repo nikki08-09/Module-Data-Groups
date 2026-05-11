@@ -30,6 +30,10 @@ test("contains returns false for non-existent property", () => {
 // When passed to contains
 // Then it should return false
 test.todo("contains on empty object returns false");
+const emptyObj = {};
+test("contains on empty object returns false", () => {
+  expect(contains(emptyObj, "anyProp")).toBe(false);
+});
 
 // Given an object with properties
 // When passed to contains with an existing property name
