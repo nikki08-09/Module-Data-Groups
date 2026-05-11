@@ -10,6 +10,8 @@ const recipe = {
   ingredients: ["olive oil", "tomatoes", "salt", "pepper"],
 };
 
+// The problem is that the ingredients are being logged as an array, which is not what we want. We want to log each ingredient on a new line. To fix this, we can use the join method to join the ingredients array into a string with a newline character as the separator.
+
 console.log(`${recipe.title} serves ${recipe.serves}
   ingredients:
-${recipe}`);
+${recipe.ingredients.join("\n")}`);
