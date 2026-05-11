@@ -22,6 +22,11 @@ test("given an empty array, returns 0", () => {
 // Given an array with just one number
 // When passed to the sum function
 // Then it should return that number
+test.todo("given an array with just one number, returns that number");
+const singleNumberArray = [42];
+test("given an array with just one number, returns that number", () => {
+  expect(sum(singleNumberArray)).toBe(42);
+});
 
 // Given an array containing negative numbers
 // When passed to the sum function
