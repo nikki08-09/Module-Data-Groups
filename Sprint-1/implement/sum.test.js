@@ -31,6 +31,13 @@ test("given an array with just one number, returns that number", () => {
 // Given an array containing negative numbers
 // When passed to the sum function
 // Then it should still return the correct total sum
+test.todo(
+  "given an array containing negative numbers, returns the correct total sum"
+);
+const negativeNumbersArray = [-10, -20, -30];
+test("given an array containing negative numbers, returns the correct total sum", () => {
+  expect(sum(negativeNumbersArray)).toBe(-60);
+});
 
 // Given an array with decimal/float numbers
 // When passed to the sum function
