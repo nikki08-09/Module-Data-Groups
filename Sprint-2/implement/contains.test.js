@@ -46,6 +46,10 @@ test("contains with existing property returns true", () => {
 // Given an object with properties
 // When passed to contains with a non-existent property name
 // Then it should return false
+test("contains with non-existent property returns false", () => {
+  const obj = { a: 1, b: 2 };
+  expect(contains(obj, "d")).toBe(false);
+});
 
 // Given invalid parameters like an array
 // When passed to contains
