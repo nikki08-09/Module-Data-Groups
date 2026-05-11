@@ -31,3 +31,11 @@ test("parses querystring values containing empty key and value", () => {
     "": "",
   });
 });
+test("strips leading ?", () => {
+  expect(parseQueryString("?equation=x=y+1")).toEqual({
+    equation: "x=y+1",
+  });
+});
+test("handles querystring with only ?", () => {
+  expect(parseQueryString("?")).toEqual({});
+});
