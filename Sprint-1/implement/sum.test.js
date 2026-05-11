@@ -53,6 +53,13 @@ test("given an array with decimal/float numbers, returns the correct total sum",
 // Given an array containing non-number values
 // When passed to the sum function
 // Then it should ignore the non-numerical values and return the sum of the numerical elements
+test.todo(
+  "given an array containing non-number values, ignores them and returns the sum of the numerical elements"
+);
+const mixedArray = ["hey", 10, "hi", 60, 10];
+test("given an array containing non-number values, ignores them and returns the sum of the numerical elements", () => {
+  expect(sum(mixedArray)).toBe(80);
+});
 
 // Given an array with only non-number values
 // When passed to the sum function
