@@ -67,6 +67,13 @@ test("given an array with decimal numbers, returns the largest decimal number", 
 // Given an array with non-number values
 // When passed to the max function
 // Then it should return the max and ignore non-numeric values
+test.todo(
+  "given an array with non-number values, returns the max and ignore non-numeric values"
+);
+const mixedValuesArray = [10, "hello", 20, null, 5];
+test("given an array with non-number values, returns the max and ignore non-numeric values", () => {
+  expect(findMax(mixedValuesArray)).toBe(20);
+});
 
 // Given an array with only non-number values
 // When passed to the max function
