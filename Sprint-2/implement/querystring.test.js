@@ -39,3 +39,8 @@ test("strips leading ?", () => {
 test("handles querystring with only ?", () => {
   expect(parseQueryString("?")).toEqual({});
 });
+test("decodes complex values", () => {
+  expect(parseQueryString("message=Hello%20World")).toEqual({
+    message: "Hello World",
+  });
+});
