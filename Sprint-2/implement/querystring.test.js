@@ -16,3 +16,8 @@ test("parses querystring values containing &", () => {
     y: "1",
   });
 });
+test("parses querystring values containing empty value", () => {
+  expect(parseQueryString("equation=")).toEqual({
+    equation: "",
+  });
+});
