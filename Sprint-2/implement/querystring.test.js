@@ -49,3 +49,9 @@ test("decodes Urll encoded keys", () => {
     "greeting message": "Hello World",
   });
 });
+test("ignores empty segments from double &&", () => {
+  expect(parseQueryString("a=1&&b=2")).toEqual({
+    a: "1",
+    b: "2",
+  });
+});
