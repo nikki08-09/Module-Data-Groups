@@ -8,3 +8,10 @@ test("invert should swap keys and values in the object", () => {
 test("invert should handle empty objects", () => {
   expect(invert({})).toEqual({});
 });
+test("invert should handle objects with non-string keys and values", () => {
+  expect(invert({ 1: "a", 2: "b" })).toEqual({ a: "1", b: "2" });
+  expect(invert({ true: false, false: true })).toEqual({
+    false: "true",
+    true: "false",
+  });
+});
