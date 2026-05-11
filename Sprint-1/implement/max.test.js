@@ -56,6 +56,13 @@ test("given an array with just negative numbers, returns the closest one to zero
 // Given an array with decimal numbers
 // When passed to the max function
 // Then it should return the largest decimal number
+test.todo(
+  "given an array with decimal numbers, returns the largest decimal number"
+);
+const decimalNumbersArray = [1.5, 2.3, 0.7, 3.1];
+test("given an array with decimal numbers, returns the largest decimal number", () => {
+  expect(findMax(decimalNumbersArray)).toBe(3.1);
+});
 
 // Given an array with non-number values
 // When passed to the max function
