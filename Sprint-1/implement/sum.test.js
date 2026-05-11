@@ -42,6 +42,13 @@ test("given an array containing negative numbers, returns the correct total sum"
 // Given an array with decimal/float numbers
 // When passed to the sum function
 // Then it should return the correct total sum
+test.todo(
+  "given an array with decimal/float numbers, returns the correct total sum"
+);
+const decimalNumbersArray = [1.5, 2.5, 3.5];
+test("given an array with decimal/float numbers, returns the correct total sum", () => {
+  expect(sum(decimalNumbersArray)).toBe(7.5);
+});
 
 // Given an array containing non-number values
 // When passed to the sum function
