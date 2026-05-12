@@ -15,8 +15,8 @@ window.addEventListener("load", () => {
     });
 
   // Populate sample data
-  Todos.addTask(todos, "Wash the dishes", false);
-  Todos.addTask(todos, "Do the shopping", true);
+  Todos.addTask(todos, "Wash the dishes", "2023-10-15", false);
+  Todos.addTask(todos, "Do the shopping", "2023-10-16", true);
 
   render();
 });
@@ -25,13 +25,18 @@ window.addEventListener("load", () => {
 // append a new task to the todo list.
 function addNewTodo() {
   const taskInput = document.getElementById("new-task-input");
+  const dateInput = document.getElementById("date-input");
+
   const task = taskInput.value.trim();
+  const dueDate = dateInput.value;
+
   if (task) {
-    Todos.addTask(todos, task, false);
+    Todos.addTask(todos, task, dueDate, false);
     render();
   }
 
   taskInput.value = "";
+  dateInput.value = "";
 }
 
 // Note:
@@ -59,9 +64,10 @@ const todoListItemTemplate =
 
 // Create a <li> element for the given todo task
 function createListItem(todo, index) {
-  const li = todoListItemTemplate.cloneNode(true); // true => Do a deep copy of the node
-
-  li.querySelector(".description").textContent = todo.task;
+  const li = todoListItemTemplate.cloneNode(true);
+  // true => Do a deep copy of the node
+  const dueDateEl = todo.dueDate ? ` (Due: ${todo.dueDate})` : "";
+  li.querySelector(".description").textContent = todo.task + dueDateEl;
   if (todo.completed) {
     li.classList.add("completed");
   }
