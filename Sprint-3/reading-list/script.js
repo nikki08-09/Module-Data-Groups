@@ -21,3 +21,15 @@ const books = [
   },
 ];
 
+const readingList = document.querySelector("#reading-list");
+
+books.forEach((book) => {
+  const listItem = document.createElement("li");
+  listItem.innerHTML = `
+    <h3>${book.title}</h3>
+    <p>by ${book.author}</p>
+    <img src="${book.bookCoverImage}" alt="${book.title} cover">
+    <p>${book.alreadyRead ? "Already read" : "Not read yet"}</p>
+  `;
+  readingList.appendChild(listItem);
+});
