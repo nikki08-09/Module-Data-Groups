@@ -1,1 +1,19 @@
-/** Write your CSS in here **/
+#carousel-img {
+  width: 400px;
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+}
+.slideshow-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.slideshow-container {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+}
