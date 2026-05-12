@@ -8,10 +8,10 @@ const todos = [];
 window.addEventListener("load", () => {
   document.getElementById("add-task-btn").addEventListener("click", addNewTodo);
   document
-    .getElementById("delete-completed-btn")
+    .getElementById("clear-completed-btn")
     .addEventListener("click", () => {
       Todos.deleteCompleted(todos);
-      populateTodoList();
+      render();
     });
 
   // Populate sample data
