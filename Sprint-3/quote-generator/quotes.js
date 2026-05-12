@@ -494,7 +494,22 @@ const quotes = [
 function getRandomQuote() {
   return pickFromArray(quotes);
 }
-
+document.getElementById("quote").textContent =
+  "Click the button to generate a quote!";
+document.body.style.backgroundColor = "orange";
+document.body.style.alignItems = "center";
+document.body.style.justifyContent = "center";
+document.body.style.display = "flex";
+document.body.style.height = "100vh";
+document.body.style.flexDirection = "column";
+document.getElementById("quote").style.color = "orange";
+document.getElementById("quote-box").style.backgroundColor = "white";
+document.getElementById("quote-box").style.padding = "20px";
+document.getElementById("quote-box").style.borderRadius = "10px";
+document.getElementById("quote-box").style.textAlign = "center";
+document.getElementById("quote").style.fontSize = "24px";
+document.getElementById("author").style.fontSize = "20px";
+document.getElementById("quote-box").style.width = "250px";
 const quoteButton = document.getElementById("new-quote");
 quoteButton.addEventListener("click", function () {
   const quote = getRandomQuote();
