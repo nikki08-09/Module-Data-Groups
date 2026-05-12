@@ -31,5 +31,6 @@ books.forEach((book) => {
     <img src="${book.bookCoverImage}" alt="${book.title} cover">
     <p>${book.alreadyRead ? "Already read" : "Not read yet"}</p>
   `;
+  listItem.style.backgroundColor = book.alreadyRead ? "green" : "red";
   readingList.appendChild(listItem);
 });
