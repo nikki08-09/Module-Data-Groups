@@ -10,11 +10,11 @@
 */
 
 // Append a new task to todos[]
-export function addTask(todos, task, completed = false) {
-  todos.push({ task, completed });
+export function addTask(todos, task, dueDate = "", completed = false) {
+  todos.push({ task, dueDate, completed });
 }
 
-// Delete todos[taskIndex] if it exists
+// Delete todos[taskIndex] if it exists.
 export function deleteTask(todos, taskIndex) {
   if (todos[taskIndex]) {
     todos.splice(taskIndex, 1);
